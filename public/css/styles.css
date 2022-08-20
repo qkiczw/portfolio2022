@@ -11,3 +11,37 @@ html {
 body {
   font-size: 1.6rem;
 }
+
+.app .header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+}
+.app .header__container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app .header__picture-container {
+  display: flex;
+  justify-content: center;
+}
+.app .header__picture {
+  max-width: 80%;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 25px;
+  }
+  .header .header__container {
+    width: 90%;
+    border-radius: 15px;
+    min-height: 300px;
+  }
+}
