@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,7 @@ html {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -25,14 +28,31 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3rem;
 }
 .app .header__picture-container {
   display: flex;
   justify-content: center;
 }
 .app .header__picture {
-  max-width: 80%;
-  border-radius: 5px;
+  max-width: 70%;
+}
+.app .header__personal-text {
+  margin-top: 3rem;
+  text-transform: uppercase;
+}
+.app .header__personal-text .personal-text__name {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.app .header__personal-text .personal-text__name__second-line {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {

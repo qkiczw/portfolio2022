@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+// Variables
+$general-padding: 3rem;
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +15,8 @@ html {
   font-size: 62.5%; // from now 1rem === 10px
 }
 body {
+  font-family: "Roboto", sans-serif;
+
   font-size: 1.6rem; // we set default font size value to the 16px as it was
 }
 
@@ -19,20 +27,41 @@ body {
     width: 100%;
     min-height: 100px;
     background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+
     &__container {
       background-color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: $general-padding;
     }
     &__picture-container {
       display: flex;
       justify-content: center;
     }
     &__picture {
-      max-width: 80%;
-      border-radius: 5px;
+      max-width: 70%;
+      // border-radius: 5px;
+    }
+    &__personal-text {
+      margin-top: 3rem;
+      text-transform: uppercase;
+
+      .personal-text__name {
+        display: flex;
+        flex-direction: column;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+
+        margin-top: 1rem;
+        &__second-line {
+          font-family: "Roboto", sans-serif;
+          font-weight: 600;
+          font-size: 1.6rem;
+          margin-top: 1rem;
+        }
+      }
     }
   }
 }
