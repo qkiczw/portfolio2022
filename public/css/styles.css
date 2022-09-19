@@ -37,6 +37,7 @@ body {
   background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
 }
 .app .header__container {
+  max-width: 1600px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -49,7 +50,7 @@ body {
   justify-content: center;
 }
 .app .header__picture {
-  max-width: 70%;
+  max-width: 100%;
 }
 .app .header__personal-text {
   margin-top: 3rem;
@@ -117,7 +118,16 @@ body {
     gap: 5rem;
   }
   .app .header__picture {
-    max-width: 90%;
     border-radius: 10px;
+  }
+  .app .header__personal-text .personal-text__name {
+    font-size: 4.8rem;
+    margin-top: 1rem;
+  }
+  .app .header__personal-text .personal-text__name__second-line {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: 1rem;
   }
 }
