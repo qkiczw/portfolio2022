@@ -94,7 +94,6 @@ body {
         gap: 3rem;
         text-transform: uppercase;
         display: none;
-        transition-duration: 1s;
 
         a,
         a:visited {
@@ -193,6 +192,7 @@ body {
         }
         &__links {
           flex-direction: row;
+          display: flex;
         }
       }
       &__container {

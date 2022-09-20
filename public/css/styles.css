@@ -75,7 +75,6 @@ body {
   gap: 3rem;
   text-transform: uppercase;
   display: none;
-  transition-duration: 1s;
 }
 .app .header .navbar__links a,
 .app .header .navbar__links a:visited {
@@ -170,6 +169,7 @@ body {
   }
   .app .header .navbar__links {
     flex-direction: row;
+    display: flex;
   }
   .app .header__container {
     display: flex;
