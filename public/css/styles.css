@@ -43,11 +43,12 @@ body {
   justify-content: space-between;
   flex-direction: row;
   background-color: #131313;
+  padding: 2rem;
 }
 .app .header .navbar__logo {
   color: #ffffff;
 }
-.app .header .navbar__menu {
+.app .header .navbar__links {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -56,8 +57,8 @@ body {
   gap: 3rem;
   text-transform: uppercase;
 }
-.app .header .navbar__menu a,
-.app .header .navbar__menu a:visited {
+.app .header .navbar__links a,
+.app .header .navbar__links a:visited {
   color: #ffffff;
   text-decoration: none;
 }

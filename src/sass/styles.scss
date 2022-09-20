@@ -64,11 +64,11 @@ body {
       justify-content: space-between;
       flex-direction: row;
       background-color: $menu-color-dark;
-      // padding: 5rem 16rem;
+      padding: 2rem;
       &__logo {
         color: #ffffff;
       }
-      &__menu {
+      &__links {
         @include cenenter-in-row;
         flex-direction: column;
         list-style: none;
