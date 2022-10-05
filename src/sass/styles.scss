@@ -21,6 +21,7 @@ $icon-color-hover: rgb(40, 40, 40);
 $menu-color-dark: #131313;
 $font-color-primary: #777;
 $font-color-titles: #222;
+$background-color-first: #f9f9ff;
 
 * {
   margin: 0;
@@ -49,6 +50,28 @@ body {
 }
 .link:visited {
   color: $icon-color;
+}
+
+.section__title {
+  width: 100%;
+  @include cenenter-in-row;
+  flex-direction: column;
+  padding-top: 7.5rem;
+  padding-bottom: 7rem;
+  color: $font-color-titles;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+
+  &__second-row {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $font-color-primary;
+    text-transform: none;
+    padding-top: 1rem;
+  }
 }
 
 .app {
@@ -176,9 +199,23 @@ body {
       }
     }
   }
+  #projects__section {
+    background-color: $background-color-first;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .section__title {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+    font-size: 4.8rem;
+
+    &__second-row {
+      font-size: 1.6rem;
+      padding-top: 1rem;
+    }
+  }
+
   .app {
     .header {
       padding-top: 25px;
@@ -207,6 +244,19 @@ body {
       &__picture-container {
         margin-top: 0;
       }
+      &__personal-text {
+        .personal-text__name {
+          font-size: 4.8rem;
+          margin-top: 1rem;
+
+          &__second-line {
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+            font-size: 1.6rem;
+            margin-top: 1rem;
+          }
+        }
+      }
     }
   }
 }
@@ -224,19 +274,6 @@ body {
       }
       &__picture {
         border-radius: 10px;
-      }
-      &__personal-text {
-        .personal-text__name {
-          font-size: 4.8rem;
-
-          margin-top: 1rem;
-          &__second-line {
-            font-family: "Roboto", sans-serif;
-            font-weight: 600;
-            font-size: 1.6rem;
-            margin-top: 1rem;
-          }
-        }
       }
     }
   }
