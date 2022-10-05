@@ -45,10 +45,13 @@ body {
   justify-content: space-between;
   gap: 2rem;
   background-color: #131313;
-  padding: 2rem;
+  padding: 0.3rem 2rem;
 }
 .app .header .navbar__logo {
   color: #ffffff;
+}
+.app .header .navbar__logo img {
+  max-width: 150px;
 }
 .app .header .navbar__toggle-button {
   position: absolute;
@@ -168,6 +171,9 @@ body {
     flex-direction: row;
     display: flex;
   }
+  .app .header .navbar__logo img {
+    max-width: 200px;
+  }
   .app .header__container {
     width: 90%;
     border-radius: 15px;
@@ -204,5 +210,8 @@ body {
 @media screen and (min-width: 1600px) {
   .app .header .navbar {
     padding: 5rem 16rem;
+  }
+  .app .header .navbar__logo img {
+    max-width: 250px;
   }
 }

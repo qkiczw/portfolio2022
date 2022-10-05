@@ -68,9 +68,12 @@ body {
       justify-content: space-between;
       gap: 2rem;
       background-color: $menu-color-dark;
-      padding: 2rem;
+      padding: 0.3rem 2rem;
       &__logo {
         color: #ffffff;
+        img {
+          max-width: 150px;
+        }
       }
       &__toggle-button {
         position: absolute;
@@ -190,6 +193,11 @@ body {
           flex-direction: row;
           display: flex;
         }
+        &__logo {
+          img {
+            max-width: 200px;
+          }
+        }
       }
       &__container {
         width: 90%;
@@ -239,6 +247,11 @@ body {
     .header {
       .navbar {
         padding: 5rem 16rem;
+        &__logo {
+          img {
+            max-width: 250px;
+          }
+        }
       }
     }
   }
