@@ -138,6 +138,7 @@ body {
     &__container {
       max-width: 1600px;
       background-color: #ffffff;
+      box-shadow: 0 20px 80px 0 rgb(153 153 153 / 30%);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -208,11 +209,14 @@ body {
   .section__title {
     padding-top: 12rem;
     padding-bottom: 10rem;
-    font-size: 4.8rem;
+    font-size: 3.6rem;
 
     &__second-row {
       font-size: 1.6rem;
       padding-top: 1rem;
+    }
+    &--projects {
+      padding-top: 25rem;
     }
   }
 
@@ -222,7 +226,7 @@ body {
       .navbar {
         flex-direction: row;
         background: none;
-        padding: 5rem 5rem;
+        padding: 5rem 5rem 0;
         &__toggle-button {
           display: none;
         }
@@ -237,6 +241,8 @@ body {
         }
       }
       &__container {
+        position: relative;
+        bottom: -100px;
         width: 90%;
         border-radius: 15px;
         min-height: 300px;
@@ -264,7 +270,7 @@ body {
   .app {
     .header {
       .navbar {
-        padding: 5rem 10rem;
+        padding: 5rem 10rem 0;
       }
       &__container {
         display: flex;
@@ -283,7 +289,7 @@ body {
   .app {
     .header {
       .navbar {
-        padding: 5rem 16rem;
+        padding: 5rem 16rem 0;
         &__logo {
           img {
             max-width: 250px;
