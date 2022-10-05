@@ -13,6 +13,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  color: #777;
 }
 
 .link {
@@ -96,6 +97,7 @@ body {
 .app .header__picture-container {
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
 }
 .app .header__picture {
   max-width: 100%;
@@ -103,12 +105,14 @@ body {
 .app .header__personal-text {
   margin-top: 3rem;
   text-transform: uppercase;
+  color: #222;
 }
 .app .header__personal-text .personal-text__name {
   display: flex;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  color: #222;
   margin-top: 1rem;
 }
 .app .header__personal-text .personal-text__name__second-line {
@@ -149,20 +153,13 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  .app .header {
     padding-top: 25px;
   }
-  .header__container {
-    width: 90%;
-    border-radius: 15px;
-    min-height: 300px;
-  }
-}
-@media screen and (min-width: 1200px) {
   .app .header .navbar {
     flex-direction: row;
     background: none;
-    padding: 5rem 15rem;
+    padding: 5rem 5rem;
   }
   .app .header .navbar__toggle-button {
     display: none;
@@ -170,6 +167,19 @@ body {
   .app .header .navbar__links {
     flex-direction: row;
     display: flex;
+  }
+  .app .header__container {
+    width: 90%;
+    border-radius: 15px;
+    min-height: 300px;
+  }
+  .app .header__picture-container {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .app .header .navbar {
+    padding: 5rem 10rem;
   }
   .app .header__container {
     display: flex;
@@ -189,5 +199,10 @@ body {
     font-weight: 600;
     font-size: 1.6rem;
     margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .app .header .navbar {
+    padding: 5rem 16rem;
   }
 }
