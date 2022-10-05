@@ -13,6 +13,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  color: #777;
 }
 
 .link {
@@ -31,10 +32,61 @@ body {
 
 .app .header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items: center;
   min-height: 100px;
   background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+}
+.app .header .navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #131313;
+  padding: 0.3rem 2rem;
+}
+.app .header .navbar__logo {
+  color: #ffffff;
+}
+.app .header .navbar__logo img {
+  max-width: 150px;
+}
+.app .header .navbar__toggle-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.app .header .navbar__toggle-button .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.app .header .navbar__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  gap: 3rem;
+  text-transform: uppercase;
+  display: none;
+}
+.app .header .navbar__links a,
+.app .header .navbar__links a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+.app .header .navbar__links.active {
+  display: flex;
 }
 .app .header__container {
   max-width: 1600px;
@@ -48,6 +100,7 @@ body {
 .app .header__picture-container {
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
 }
 .app .header__picture {
   max-width: 100%;
@@ -55,12 +108,14 @@ body {
 .app .header__personal-text {
   margin-top: 3rem;
   text-transform: uppercase;
+  color: #222;
 }
 .app .header__personal-text .personal-text__name {
   display: flex;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  color: #222;
   margin-top: 1rem;
 }
 .app .header__personal-text .personal-text__name__second-line {
@@ -101,16 +156,37 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  .app .header {
     padding-top: 25px;
   }
-  .header__container {
+  .app .header .navbar {
+    flex-direction: row;
+    background: none;
+    padding: 5rem 5rem;
+  }
+  .app .header .navbar__toggle-button {
+    display: none;
+  }
+  .app .header .navbar__links {
+    flex-direction: row;
+    display: flex;
+  }
+  .app .header .navbar__logo img {
+    max-width: 200px;
+  }
+  .app .header__container {
     width: 90%;
     border-radius: 15px;
     min-height: 300px;
   }
+  .app .header__picture-container {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
+  .app .header .navbar {
+    padding: 5rem 10rem;
+  }
   .app .header__container {
     display: flex;
     flex-direction: row;
@@ -129,5 +205,13 @@ body {
     font-weight: 600;
     font-size: 1.6rem;
     margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .app .header .navbar {
+    padding: 5rem 16rem;
+  }
+  .app .header .navbar__logo img {
+    max-width: 250px;
   }
 }
