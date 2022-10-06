@@ -202,6 +202,29 @@ body {
   }
   #projects__section {
     background-color: $background-color-first;
+    padding: 0 2rem;
+
+    .projects {
+      width: 100%;
+
+      background-color: #88f3ff;
+      &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+        .project {
+          background-color: red;
+          width: 100%;
+          max-width: 350px;
+          min-height: 200px;
+          &__image {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -282,6 +305,18 @@ body {
         border-radius: 10px;
       }
     }
+    #projects__section {
+      padding: 0 5rem;
+
+      .projects {
+        &__container {
+          .project {
+            &__image {
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -293,6 +328,36 @@ body {
         &__logo {
           img {
             max-width: 250px;
+          }
+        }
+      }
+    }
+    #projects__section {
+      padding: 0 10rem;
+
+      .projects {
+        &__container {
+          .project {
+            &__image {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .app {
+    .header {
+    }
+    #projects__section {
+      padding: 0 15rem;
+
+      .projects {
+        &__container {
+          .project {
+            &__image {
+            }
           }
         }
       }

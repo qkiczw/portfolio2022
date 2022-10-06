@@ -180,6 +180,27 @@ body {
 }
 .app #projects__section {
   background-color: #f9f9ff;
+  padding: 0 2rem;
+}
+.app #projects__section .projects {
+  width: 100%;
+  background-color: #88f3ff;
+}
+.app #projects__section .projects__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.app #projects__section .projects__container .project {
+  background-color: red;
+  width: 100%;
+  max-width: 350px;
+  min-height: 200px;
+}
+.app #projects__section .projects__container .project__image {
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -247,6 +268,9 @@ body {
   .app .header__picture {
     border-radius: 10px;
   }
+  .app #projects__section {
+    padding: 0 5rem;
+  }
 }
 @media screen and (min-width: 1600px) {
   .app .header .navbar {
@@ -254,5 +278,13 @@ body {
   }
   .app .header .navbar__logo img {
     max-width: 250px;
+  }
+  .app #projects__section {
+    padding: 0 10rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .app #projects__section {
+    padding: 0 15rem;
   }
 }
