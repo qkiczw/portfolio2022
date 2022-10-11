@@ -13,6 +13,13 @@
   flex-direction: row;
   align-items: center;
 }
+@mixin center-in-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 // Variables
 $general-padding: 3rem;
@@ -21,6 +28,8 @@ $icon-color-hover: rgb(40, 40, 40);
 $menu-color-dark: #131313;
 $font-color-primary: #777;
 $font-color-titles: #222;
+$background-color-first: #f9f9ff;
+$border-radius: 10px;
 
 * {
   margin: 0;
@@ -49,6 +58,28 @@ body {
 }
 .link:visited {
   color: $icon-color;
+}
+
+.section__title {
+  width: 100%;
+  @include cenenter-in-row;
+  flex-direction: column;
+  padding-top: 7.5rem;
+  padding-bottom: 7rem;
+  color: $font-color-titles;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+
+  &__second-row {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $font-color-primary;
+    text-transform: none;
+    padding-top: 1rem;
+  }
 }
 
 .app {
@@ -115,10 +146,8 @@ body {
     &__container {
       max-width: 1600px;
       background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      box-shadow: 0 20px 80px 0 rgb(153 153 153 / 30%);
+      @include center-in-col;
       padding: $general-padding;
     }
     &__picture-container {
@@ -176,16 +205,119 @@ body {
       }
     }
   }
+  #projects__section {
+    background-color: $background-color-first;
+    padding: 0 2rem;
+
+    .projects {
+      width: 100%;
+
+      // background-color: #88f3ff;
+      &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+        .project {
+          width: 100%;
+          max-width: 350px;
+          min-height: 200px;
+
+          &__desc {
+            position: relative;
+            overflow: hidden;
+          }
+          &__info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include center-in-col;
+            line-height: 2rem;
+            text-align: center;
+            color: #ffffff;
+            background: rgb(118, 109, 255);
+            background: linear-gradient(
+              90deg,
+              rgba(118, 109, 255, 0.75) 0%,
+              rgba(136, 243, 255, 0.75) 100%
+            );
+            border-radius: $border-radius;
+            opacity: 0;
+            transition: all 0.25s ease-in-out;
+          }
+          &__info:hover {
+            opacity: 1;
+          }
+          &__link,
+          &__link:visited {
+            color: #ffffff;
+          }
+          &__link:hover {
+            color: #c9c9c9;
+          }
+
+          &__title {
+            margin-top: 2.3rem;
+            text-transform: uppercase;
+            font-size: 2.1rem;
+            font-weight: bold;
+            text-align: center;
+            color: $font-color-titles;
+          }
+          &__image {
+            width: 100%;
+            img {
+              width: 100%;
+              border-radius: $border-radius;
+            }
+          }
+
+          &__icons {
+            margin-top: 2rem;
+            font-size: 4rem;
+            display: flex;
+            gap: 4rem;
+            cursor: pointer;
+          }
+          &__tech-icons {
+            margin-top: 1rem;
+            width: 100%;
+            @include cenenter-in-row;
+            justify-content: center;
+            gap: 2.5rem;
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .section__title {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+    font-size: 3.6rem;
+
+    &__second-row {
+      font-size: 1.6rem;
+      padding-top: 1rem;
+    }
+    &--projects {
+      padding-top: 25rem;
+    }
+  }
+
   .app {
     .header {
       padding-top: 25px;
       .navbar {
         flex-direction: row;
         background: none;
-        padding: 5rem 5rem;
+        padding: 5rem 5rem 0;
         &__toggle-button {
           display: none;
         }
@@ -200,6 +332,8 @@ body {
         }
       }
       &__container {
+        position: relative;
+        bottom: -100px;
         width: 90%;
         border-radius: 15px;
         min-height: 300px;
@@ -207,29 +341,11 @@ body {
       &__picture-container {
         margin-top: 0;
       }
-    }
-  }
-}
-@media screen and (min-width: 1200px) {
-  .app {
-    .header {
-      .navbar {
-        padding: 5rem 10rem;
-      }
-      &__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 5rem;
-      }
-      &__picture {
-        border-radius: 10px;
-      }
       &__personal-text {
         .personal-text__name {
           font-size: 4.8rem;
-
           margin-top: 1rem;
+
           &__second-line {
             font-family: "Roboto", sans-serif;
             font-weight: 600;
@@ -241,15 +357,75 @@ body {
     }
   }
 }
+@media screen and (min-width: 1200px) {
+  .app {
+    .header {
+      .navbar {
+        padding: 5rem 10rem 0;
+      }
+      &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5rem;
+      }
+      &__picture {
+        border-radius: 10px;
+      }
+    }
+    #projects__section {
+      padding: 0 5rem;
+
+      .projects {
+        &__container {
+          .project {
+            &__image {
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media screen and (min-width: 1600px) {
   .app {
     .header {
       .navbar {
-        padding: 5rem 16rem;
+        padding: 5rem 16rem 0;
         &__logo {
           img {
             max-width: 250px;
+          }
+        }
+      }
+    }
+    #projects__section {
+      padding: 0 10rem;
+
+      .projects {
+        &__container {
+          .project {
+            &__image {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .app {
+    .header {
+    }
+    #projects__section {
+      padding: 0 15rem;
+
+      .projects {
+        &__container {
+          .project {
+            &__image {
+            }
           }
         }
       }
