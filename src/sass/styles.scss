@@ -43,7 +43,6 @@ html {
 }
 body {
   font-family: "Roboto", sans-serif;
-
   font-size: 1.6rem; // we set default font size value to the 16px as it was
   color: $font-color-primary;
 }
@@ -79,6 +78,8 @@ body {
     color: $font-color-primary;
     text-transform: none;
     padding-top: 1rem;
+  }
+  &--other-project {
   }
 }
 
@@ -223,6 +224,7 @@ body {
           width: 100%;
           max-width: 350px;
           min-height: 200px;
+          margin-bottom: 7rem;
 
           &__desc {
             position: relative;
@@ -431,4 +433,9 @@ body {
       }
     }
   }
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
 }

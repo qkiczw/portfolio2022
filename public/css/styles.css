@@ -52,7 +52,6 @@ body {
   text-transform: none;
   padding-top: 1rem;
 }
-
 .app .header {
   display: flex;
   flex-direction: column;
@@ -197,6 +196,7 @@ body {
   width: 100%;
   max-width: 350px;
   min-height: 200px;
+  margin-bottom: 7rem;
 }
 .app #projects__section .projects__container .project__desc {
   position: relative;
@@ -348,4 +348,8 @@ body {
   .app #projects__section {
     padding: 0 15rem;
   }
+}
+.swiper {
+  width: 100%;
+  height: 300px;
 }
