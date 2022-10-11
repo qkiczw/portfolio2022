@@ -225,9 +225,16 @@ body {
 .app #projects__section .projects__container .project__info:hover {
   opacity: 1;
 }
+.app #projects__section .projects__container .project__link, .app #projects__section .projects__container .project__link:visited {
+  color: #ffffff;
+}
+.app #projects__section .projects__container .project__link:hover {
+  color: #c9c9c9;
+}
 .app #projects__section .projects__container .project__title {
+  margin-top: 2.3rem;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: bold;
   text-align: center;
   color: #222;
@@ -246,8 +253,18 @@ body {
   gap: 4rem;
   cursor: pointer;
 }
+.app #projects__section .projects__container .project__tech-icons {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 3rem;
+}
 
-@media screen and (min-width: 68px) {
+@media screen and (min-width: 768px) {
   .section__title {
     padding-top: 12rem;
     padding-bottom: 10rem;
