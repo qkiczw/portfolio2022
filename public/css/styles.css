@@ -200,6 +200,7 @@ body {
 }
 .app #projects__section .projects__container .project__desc {
   position: relative;
+  overflow: hidden;
 }
 .app #projects__section .projects__container .project__info {
   position: absolute;
@@ -216,8 +217,13 @@ body {
   text-align: center;
   color: #ffffff;
   background: rgb(118, 109, 255);
-  background: linear-gradient(90deg, rgb(118, 109, 255) 0%, rgb(136, 243, 255) 100%);
+  background: linear-gradient(90deg, rgba(118, 109, 255, 0.75) 0%, rgba(136, 243, 255, 0.75) 100%);
   border-radius: 10px;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+.app #projects__section .projects__container .project__info:hover {
+  opacity: 1;
 }
 .app #projects__section .projects__container .project__title {
   text-transform: uppercase;
@@ -233,7 +239,11 @@ body {
   width: 100%;
   border-radius: 10px;
 }
-.app #projects__section .projects__container .project__image:hover {
+.app #projects__section .projects__container .project__icons {
+  margin-top: 2rem;
+  font-size: 4rem;
+  display: flex;
+  gap: 4rem;
   cursor: pointer;
 }
 
