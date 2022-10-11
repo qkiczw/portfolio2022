@@ -117,8 +117,9 @@ body {
   box-shadow: 0 20px 80px 0 rgba(153, 153, 153, 0.3);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 3rem;
 }
 .app .header__picture-container {
@@ -184,7 +185,6 @@ body {
 }
 .app #projects__section .projects {
   width: 100%;
-  background-color: #88f3ff;
 }
 .app #projects__section .projects__container {
   width: 100%;
@@ -194,16 +194,50 @@ body {
   gap: 2rem;
 }
 .app #projects__section .projects__container .project {
-  background-color: red;
   width: 100%;
   max-width: 350px;
   min-height: 200px;
 }
+.app #projects__section .projects__container .project__desc {
+  position: relative;
+}
+.app #projects__section .projects__container .project__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 2rem;
+  text-align: center;
+  color: #ffffff;
+  background: rgb(118, 109, 255);
+  background: linear-gradient(90deg, rgb(118, 109, 255) 0%, rgb(136, 243, 255) 100%);
+  border-radius: 10px;
+}
+.app #projects__section .projects__container .project__title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #222;
+}
 .app #projects__section .projects__container .project__image {
   width: 100%;
 }
+.app #projects__section .projects__container .project__image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.app #projects__section .projects__container .project__image:hover {
+  cursor: pointer;
+}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 68px) {
   .section__title {
     padding-top: 12rem;
     padding-bottom: 10rem;

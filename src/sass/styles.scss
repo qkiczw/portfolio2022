@@ -13,6 +13,13 @@
   flex-direction: row;
   align-items: center;
 }
+@mixin center-in-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 // Variables
 $general-padding: 3rem;
@@ -22,6 +29,7 @@ $menu-color-dark: #131313;
 $font-color-primary: #777;
 $font-color-titles: #222;
 $background-color-first: #f9f9ff;
+$border-radius: 10px;
 
 * {
   margin: 0;
@@ -139,10 +147,7 @@ body {
       max-width: 1600px;
       background-color: #ffffff;
       box-shadow: 0 20px 80px 0 rgb(153 153 153 / 30%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include center-in-col;
       padding: $general-padding;
     }
     &__picture-container {
@@ -207,7 +212,7 @@ body {
     .projects {
       width: 100%;
 
-      background-color: #88f3ff;
+      // background-color: #88f3ff;
       &__container {
         width: 100%;
         display: flex;
@@ -215,12 +220,47 @@ body {
         justify-content: space-around;
         gap: 2rem;
         .project {
-          background-color: red;
           width: 100%;
           max-width: 350px;
           min-height: 200px;
+
+          &__desc {
+            position: relative;
+          }
+          &__info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include center-in-col;
+            line-height: 2rem;
+            text-align: center;
+            color: #ffffff;
+            background: rgb(118, 109, 255);
+            background: linear-gradient(
+              90deg,
+              rgba(118, 109, 255, 1) 0%,
+              rgba(136, 243, 255, 1) 100%
+            );
+            border-radius: $border-radius;
+          }
+          &__title {
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            color: $font-color-titles;
+          }
           &__image {
             width: 100%;
+            img {
+              width: 100%;
+              border-radius: $border-radius;
+            }
+          }
+          &__image:hover {
+            cursor: pointer;
           }
         }
       }
@@ -228,7 +268,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 68px) {
   .section__title {
     padding-top: 12rem;
     padding-bottom: 10rem;
